@@ -38,7 +38,7 @@ export default function VSLPage() {
           {Object.values(plans).map((plan) => (
             <div
               key={plan.id}
-              className={`bg-white rounded-lg shadow-lg p-8 ${
+              className={`bg-white rounded-lg shadow-lg p-8 flex flex-col ${
                 plan.id === 'premium' ? 'border-4 border-purple-600 relative' : 'border-2 border-gray-200'
               }`}
             >
@@ -52,7 +52,7 @@ export default function VSLPage() {
               <p className="text-gray-600 mb-6">{plan.description}</p>
               <p className="text-4xl font-bold mb-6">R$ {plan.price}</p>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-green-500 mr-2">✓</span>
@@ -134,9 +134,6 @@ export default function VSLPage() {
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm text-gray-400 mb-4">
             © 2026 Six VSL Test - Todos os direitos reservados
-          </p>
-          <p className="text-xs text-gray-500 mb-2">
-            Este site não faz parte do Facebook ou Meta Inc.
           </p>
           <div className="flex justify-center space-x-4 text-sm">
             <a href="#" className="text-gray-400 hover:text-white">Política de Privacidade</a>

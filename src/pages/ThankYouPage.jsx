@@ -99,7 +99,7 @@ export default function ThankYouPage() {
           {Object.keys(utms).length > 0 && (
             <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 mb-8">
               <h3 className="text-sm font-bold mb-3 text-blue-900">
-                ✅ UTMs Preservados
+                UTMs Preservados
               </h3>
               <div className="grid grid-cols-1 gap-2 text-xs text-left">
                 {Object.entries(utms).map(([key, value]) => (
@@ -110,7 +110,7 @@ export default function ThankYouPage() {
                 ))}
               </div>
               <p className="text-xs text-blue-700 mt-3 italic">
-                Estes parâmetros foram preservados durante todo o fluxo: VSL → Checkout → Obrigado
+                Estes parâmetros foram preservados durante todo o fluxo do VSL
               </p>
             </div>
           )}
