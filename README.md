@@ -1,16 +1,158 @@
-# React + Vite
+# 🎯 Six VSL Test - Página de Vendas com Rastreamento UTM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Projeto desenvolvido como teste técnico para vaga de Desenvolvedor Front-end React no Grupo Six
 
-Currently, two official plugins are available:
+## 📋 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Página VSL (Video Sales Letter) responsiva com sistema completo de rastreamento UTM, desenvolvida para demonstrar habilidades em React, performance web e compreensão de marketing de resposta direta.
 
-## React Compiler
+**Deploy ao vivo:** [https://six-vsl-test.vercel.app](https://six-vsl-test.vercel.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades Implementadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎯 Core (Requisitos Obrigatórios)
+
+- ✅ **Sistema de UTM Tracking**
+  - Captura automática de parâmetros UTM da URL
+  - Persistência em `localStorage`
+  - Repasse entre páginas: VSL → Checkout → Obrigado
+  - Suporte aos 5 parâmetros: `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`
+
+- ✅ **Responsividade Mobile-First**
+  - Layout adaptativo para mobile, tablet e desktop
+  - Otimizado para dispositivos móveis (90% do tráfego)
+  - Grid responsivo com Tailwind CSS
+
+- ✅ **Performance Otimizada**
+  - Lazy loading de iframe (vídeo)
+  - Componentes React otimizados
+  - Build otimizado com Vite
+  - Meta tags SEO completas
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **React 18** - Framework JavaScript
+- **Vite** - Build tool e dev server
+- **React Router DOM** - Navegação entre páginas
+- **Tailwind CSS** - Estilização utility-first
+- **Vercel** - Deploy e hospedagem
+
+---
+
+## 🚀 Como Executar Localmente
+
+### Pré-requisitos
+- Node.js 18+ instalado
+- npm ou yarn
+
+### Instalação
+```bash
+# Clone o repositório
+git clone https://github.com/RepoDevJoao/six-vsl-test.git
+
+# Entre na pasta
+cd six-vsl-test
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
+npm run dev
+```
+
+Acesse: `http://localhost:5173`
+
+### Para testar o sistema de UTM:
+```
+http://localhost:5173/?utm_source=facebook&utm_medium=cpc&utm_campaign=black-friday&utm_content=video-1
+```
+
+---
+
+## 📂 Estrutura do Projeto
+```
+six-vsl-test/
+├── src/
+│   ├── components/       # Componentes reutilizáveis (vazio por enquanto)
+│   ├── hooks/           
+│   │   └── useUTM.js    # Hook customizado para gerenciar UTMs
+│   ├── pages/
+│   │   ├── VSLPage.jsx      # Página principal (Video Sales Letter)
+│   │   ├── CheckoutPage.jsx # Página de checkout
+│   │   └── ThankYouPage.jsx # Página de confirmação
+│   ├── utils/
+│   │   └── plans.js     # Dados dos planos (centralizados)
+│   ├── App.jsx
+│   ├── main.jsx         # Entry point + rotas
+│   └── index.css        # Tailwind imports
+├── public/
+├── index.html           # HTML base com meta tags SEO
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 📊 Métricas de Performance (Lighthouse)
+
+> ⚠️ **Screenshots em anexo na pasta `/docs/lighthouse/`**
+
+### Desktop
+- Performance: XX/100
+- Accessibility: XX/100
+- Best Practices: XX/100
+- SEO: XX/100
+
+### Mobile
+- Performance: XX/100
+- Accessibility: XX/100
+- Best Practices: XX/100
+- SEO: XX/100
+
+---
+
+## 🔄 Fluxo de UTM (Exemplo Prático)
+
+1. **Usuário clica em anúncio do Facebook:**
+```
+   https://six-vsl-test.vercel.app/?utm_source=facebook&utm_medium=cpc&utm_campaign=lancamento
+```
+
+2. **VSL Page captura e salva UTMs no localStorage**
+
+3. **Usuário clica em "Quero Este Plano" → vai para:**
+```
+   /checkout?plan=premium&utm_source=facebook&utm_medium=cpc&utm_campaign=lancamento
+```
+
+4. **Checkout mostra plano selecionado + UTMs preservados**
+
+5. **Após finalizar compra → redireciona para:**
+```
+   /obrigado?utm_source=facebook&utm_medium=cpc&utm_campaign=lancamento
+```
+
+6. **Página Obrigado confirma compra COM UTMs intactos**
+
+✅ **Resultado:** Rastreamento completo da jornada do cliente!
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+**João Vitor** - Full Stack Developer
+
+- GitHub: (https://github.com/RepoDevJoao)
+- LinkedIn: (https://www.linkedin.com/in/joaocoelhot/)
+
+---
+
+## 📄 Licença
+
+Este projeto foi desenvolvido como teste técnico para o Grupo Six.

@@ -30,19 +30,6 @@ export default function VSLPage() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="VSL Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section>
-
       {/* Products Section */}
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-center mb-12">Escolha Seu Plano</h2>
