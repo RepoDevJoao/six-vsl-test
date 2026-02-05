@@ -77,7 +77,6 @@ http://localhost:5173/?utm_source=facebook&utm_medium=cpc&utm_campaign=black-fri
 ```
 six-vsl-test/
 ├── src/
-│   ├── components/       # Componentes reutilizáveis (vazio por enquanto)
 │   ├── hooks/           
 │   │   └── useUTM.js    # Hook customizado para gerenciar UTMs
 │   ├── pages/
@@ -117,7 +116,7 @@ six-vsl-test/
 
 ---
 
-## 🔄 Fluxo de UTM (Exemplo Prático)
+## 🔄 Fluxo de UTM (Exemplo)
 
 1. **Usuário clica em anúncio do Facebook:**
 ```
@@ -138,9 +137,7 @@ six-vsl-test/
    /obrigado?utm_source=facebook&utm_medium=cpc&utm_campaign=lancamento
 ```
 
-6. **Página Obrigado confirma compra COM UTMs intactos**
-
-✅ **Resultado:** Rastreamento completo da jornada do cliente!
+6. **Página Obrigado confirma compra com UTMs**
 
 ---
 
