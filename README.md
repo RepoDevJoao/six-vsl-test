@@ -101,19 +101,19 @@ six-vsl-test/
 
 ## 📊 Métricas de Performance (Lighthouse)
 
-> ⚠️ **Screenshots em anexo na pasta `/docs/lighthouse/`**
+> **Screenshots em anexo na pasta `/docs/lighthouse/`**
 
 ### Desktop
-- Performance: XX/100
-- Accessibility: XX/100
-- Best Practices: XX/100
-- SEO: XX/100
+- Performance: 100/100
+- Accessibility: 85/100
+- Best Practices: 100/100
+- SEO: 100/100
 
 ### Mobile
-- Performance: XX/100
-- Accessibility: XX/100
-- Best Practices: XX/100
-- SEO: XX/100
+- Performance: 100/100
+- Accessibility: 85/100
+- Best Practices: 100/100
+- SEO: 100/100
 
 ---
 
